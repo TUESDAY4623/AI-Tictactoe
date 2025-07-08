@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tic-Tac-Toe - Unbeatable</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">
+                <i class="fas fa-robot"></i>
+                AI Tic-Tac-Toe
+                <span class="subtitle">Unbeatable Challenge</span>
+            </h1>
+        </header>
+
+        <div class="game-info">
+            <div class="status" id="status">Your Turn (X)</div>
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="player-label">You</span>
+                    <span class="score" id="player-score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="player-label">AI</span>
+                    <span class="score" id="ai-score">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-board" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="new-game-btn">
+                <i class="fas fa-play"></i>
+                New Game
+            </button>
+            <button class="btn btn-secondary" id="reset-scores-btn">
+                <i class="fas fa-refresh"></i>
+                Reset Scores
+            </button>
+        </div>
+
+        <div class="difficulty-selector">
+            <label for="difficulty">AI Difficulty:</label>
+            <select id="difficulty" class="difficulty-select">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard" selected>Hard (Unbeatable)</option>
+            </select>
+        </div>
+
+        <div class="game-stats">
+            <div class="stat-item">
+                <i class="fas fa-clock"></i>
+                <span>Moves: <span id="move-count">0</span></span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-trophy"></i>
+                <span>Games: <span id="games-played">0</span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Victory Modal -->
+    <div class="modal" id="victory-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Game Over!</h2>
+            </div>
+            <div class="modal-body">
+                <div class="winner-display" id="winner-display">
+                    <i class="fas fa-crown winner-icon"></i>
+                    <p id="winner-text">You won!</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="play-again-btn">
+                    <i class="fas fa-redo"></i>
+                    Play Again
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
